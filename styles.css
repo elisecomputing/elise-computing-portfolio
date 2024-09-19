@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #8B4513; /* Brown text color for all text */
+}
+
+html {
+    font-size: 62.5%; /* Base font size for rem calculations */
+}
+
+body {
+    width: 100%;
+    height: auto; /* Adjusted to avoid height issues */
+    overflow-x: hidden;
+    background-color: white; /* White background for the body */
+    margin: 0; /* Remove any default margin */
+    padding: 80px 0 0; /* Padding to avoid overlap with fixed header */
+}
+
+header {
+    position: fixed; /* Keep header fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: white; /* White background for header */
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.1)); /* Slight shadow for better visibility */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    margin-left: -20px; /* Adjusted to move logo more to the left */
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Added transition for background color */
+    padding: 0.5rem 1rem; /* Adding some padding for better hover area */
+}
+
+nav a:hover {
+    color: white; /* Change text color on hover */
+    background-color: #b74b4b; /* Background color on hover */
+    border-radius: 5px; /* Optional: rounded corners for hover effect */
+}
+
+@media (max-width: 995px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: white; /* White background for mobile nav */
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: #8B4513; /* Brown text color for mobile nav */
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9%; /* Adjust padding as necessary */
+    background-color: white; /* White background for sections */
+    margin-bottom: 0; /* Remove any bottom margin */
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: #b74b4b; /* Highlight color for spans */
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.home-img img {
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b74b4b; /* Highlight color for box shadow */
+    cursor: pointer;
+    transition: transform 0.2s linear;
+}
+
+.home-img img:hover {
+    transform: scale(1.05);
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #8B4513; /* Brown border color */
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: white; /* White text color on hover */
+    transform: scale(1.3) translateY(-5px);
+    background-color: #8B4513; /* Brown background on hover */
+    box-shadow: 0 0 25px #8B4513; /* Brown box shadow on hover */
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: #8B4513; /* Brown button background */
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: white; /* White text color */
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #8B4513; /* Brown border color */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    background-color: #6a3f2b; /* Slightly darker brown for hover */
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "Web Developer";
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid #8B4513; /* Brown cursor color */
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid #8B4513; /* Brown cursor color */
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Web Developer";
+    }
+    21%, 40% {
+        content: "Web Designer";
+    }
+    41%, 60% {
+        content: "Graphic Designer";
+    }
+    61%, 80% {
+        content: "Graphic Designer";
+    }
+    81%, 100% {
+        content: "Graphic Designer";
+    }
+}
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    background-color: white; /* White background for contact container */
+}
+
+.contact-form {
+    width: 60%;
+}
+
+.contact-form h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.submit-btn {
+    padding: 12px 25px;
+    background-color: #8B4513; /* Brown button background */
+    color: white; /* White text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #6a3f2b; /* Slightly darker brown for hover */
+}
+
+.contact-info {
+    width: 35%;
+    margin-top: 20px; /* Add margin to space it down from the form */
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-info ul li i {
+    color: #8B4513;
+    margin-right: 10px;
+}
+
+/* General section styling */
+#certificates,
+#coding-portfolio,
+#graphic-design-portfolio,
+#services {
+    padding: 60px; /* Increase padding for a larger section */
+    background-color: #fff; /* White background */
+    color: #8B4513; /* Brown text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: center;
+    min-height: 100vh; /* Ensures section takes full viewport height */
+}
+
+/* Style the heading */
+#certificates h2,
+#coding-portfolio h2,
+#graphic-design-portfolio h3,
+#services h2 {
+    font-size: 36px; /* Larger heading */
+    margin-bottom: 20px;
+    color: #8B4513; /* Brown text for the heading */
+}
+
+/* Style the paragraph and links */
+#certificates p,
+#coding-portfolio p,
+#graphic-design-portfolio p,
+#services p {
+    margin: 15px 0;
+    font-size: 24px; /* Increase font size for readability */
+    text-align: center; /* Center-align text */
+}
+
+#certificates a,
+#coding-portfolio a,
+#services a {
+    text-decoration: none; /* Remove underline from links */
+    color: #8B4513; /* Brown text for links */
+    font-weight: bold;
+    font-size: 24px; /* Ensure links are readable */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+    padding: 0.5rem 1rem; /* Adding some padding for better hover area */
+}
+
+#certificates a:hover,
+#coding-portfolio a:hover,
+#services a:hover {
+    color: white; /* Change text color on hover */
+    background-color: #b74b4b; /* Background color on hover */
+    border-radius: 5px; /* Optional: rounded corners for hover effect */
+}
+
+/* Graphic Design Portfolio Section */
+#graphic-design-portfolio {
+    padding: 60px; /* Increase padding for the section */
+    background-color: #fff; /* White background */
+    color: #8B4513; /* Brown text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: center;
+    min-height: 100vh; /* Ensures section takes full viewport height */
+}
+
+#graphic-design-portfolio h3 {
+    font-size: 36px; /* Larger heading */
+    margin-bottom: 20px;
+    color: #8B4513; /* Brown text for the heading */
+}
+
+/* Style the paragraph and links in the graphic design portfolio */
+#graphic-design-portfolio p {
+    margin: 15px 0;
+    font-size: 24px; /* Increase font size for readability */
+    text-align: center; /* Center-align text */
+}
+
+#graphic-design-portfolio a {
+    text-decoration: none; /* Remove underline from links */
+    color: #8B4513; /* Brown text for links */
+    font-weight: bold;
+    font-size: 24px; /* Ensure links are readable */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+    padding: 0.5rem 1rem; /* Adding some padding for better hover area */
+    border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+#graphic-design-portfolio a:hover {
+    color: white; /* Change text color on hover */
+    background-color: #b74b4b; /* Background color on hover */
+}
+
+/* Services Section */
+#services {
+    padding: 60px; /* Increase padding for a larger section */
+    background-color: #fff; /* White background */
+    color: #8B4513; /* Brown text */
+    text-align: center; /* Center the text */
+    margin: 0 auto; /* Center the section */
+    max-width: 800px; /* Limit the width of the section */
+}
+
+#services h2 {
+    margin-bottom: 30px; /* Increase space below the heading */
+}
+
+#services p {
+    margin: 25px 0; /* Increase spacing between paragraphs */
+    font-size: 24px; /* Ensure the font size is readable */
+}
+
+footer {
+    position: relative; /* Changed from absolute to relative */
+    width: 100%;
+    text-align: center;
+    background-color: #fff; /* Adjust to match your design */
+    color: #8B4513; /* Changed to match the main theme */
+    padding: 10px;
+    font-size: 14px;
+    border-top: 1px solid #ddd; /* Optional: adds a top border */
+}
