@@ -58,7 +58,7 @@ nav a {
 
 nav a:hover {
     color: white; /* Change text color on hover */
-    background-color: #b74b4b; /* Background color on hover */
+    background-color: #ff66c4; /* Background color on hover */
     border-radius: 5px; /* Optional: rounded corners for hover effect */
 }
 
@@ -69,8 +69,8 @@ nav a:hover {
         top: 0;
         right: 0;
         width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
+        border-left: 3px solid #ff66c4;
+        border-bottom: 3px solid #ff66c4;
         border-bottom-left-radius: 2rem;
         padding: 1rem;
         background-color: white; /* White background for mobile nav */
@@ -126,7 +126,7 @@ span {
 .home-img img {
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid #b74b4b; /* Highlight color for box shadow */
+    box-shadow: 0 0 25px solid #ff66c4; /* Highlight color for box shadow */
     cursor: pointer;
     transition: transform 0.2s linear;
 }
