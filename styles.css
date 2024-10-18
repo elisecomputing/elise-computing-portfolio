@@ -6,7 +6,7 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    color: #ff66c4; /* Brown text color for all text */
+    color: #ff66c4; 
 }
 
 html {
@@ -85,7 +85,7 @@ nav a:hover {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
-        color: #8B4513; /* Brown text color for mobile nav */
+        color: #ff66c4; 
     }
 }
 
@@ -110,7 +110,7 @@ section {
 }
 
 span {
-    color: #b74b4b; /* Highlight color for spans */
+    color: #ff66c4; /* Highlight color for spans */
 }
 
 .home-content h3 {
@@ -142,7 +142,7 @@ span {
     width: 4rem;
     height: 4rem;
     background-color: transparent;
-    border: 0.2rem solid #8B4513; /* Brown border color */
+    border: 0.2rem solid #ff66c4; 
     font-size: 2rem;
     border-radius: 50%;
     margin: 3rem 1.5rem 3rem 0;
@@ -195,14 +195,14 @@ span {
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    border-left: 3px solid #8B4513; /* Brown cursor color */
+    border-left: 3px solid #ff66c4; 
     right: -8;
     animation: cursor 0.6s infinite;
 }
 
 @keyframes cursor {
     to {
-        border-left: 3px solid #8B4513; /* Brown cursor color */
+        border-left: 3px solid #ff66c4;
     }
 }
 
@@ -352,7 +352,7 @@ span {
 #services h2 {
     font-size: 36px; /* Larger heading */
     margin-bottom: 20px;
-    color: #8B4513; /* Brown text for the heading */
+    color: #ff66c4;
 }
 
 /* Style the paragraph and links */
@@ -380,7 +380,7 @@ span {
 #coding-portfolio a:hover,
 #services a:hover {
     color: white; /* Change text color on hover */
-    background-color: #b74b4b; /* Background color on hover */
+    background-color: #ff66c4; /* Background color on hover */
     border-radius: 5px; /* Optional: rounded corners for hover effect */
 }
 
@@ -399,7 +399,7 @@ span {
 #graphic-design-portfolio h3 {
     font-size: 36px; /* Larger heading */
     margin-bottom: 20px;
-    color: #8B4513; /* Brown text for the heading */
+    color: #ff66c4;
 }
 
 /* Style the paragraph and links in the graphic design portfolio */
@@ -411,7 +411,7 @@ span {
 
 #graphic-design-portfolio a {
     text-decoration: none; /* Remove underline from links */
-    color: #8B4513; /* Brown text for links */
+    color: #ff66c4;
     font-weight: bold;
     font-size: 24px; /* Ensure links are readable */
     transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
@@ -421,14 +421,14 @@ span {
 
 #graphic-design-portfolio a:hover {
     color: white; /* Change text color on hover */
-    background-color: #b74b4b; /* Background color on hover */
+    background-color: #ff66c4;
 }
 
 /* Services Section */
 #services {
     padding: 60px; /* Increase padding for a larger section */
     background-color: #fff; /* White background */
-    color: #8B4513; /* Brown text */
+    color: #ff66c4;
     text-align: center; /* Center the text */
     margin: 0 auto; /* Center the section */
     max-width: 800px; /* Limit the width of the section */
@@ -448,7 +448,7 @@ footer {
     width: 100%;
     text-align: center;
     background-color: #fff; /* Adjust to match your design */
-    color: #8B4513; /* Changed to match the main theme */
+    color: #ff66c4;
     padding: 10px;
     font-size: 14px;
     border-top: 1px solid #ddd; /* Optional: adds a top border */
